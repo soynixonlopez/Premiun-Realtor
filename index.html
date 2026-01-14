@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premier Realtors - Especialistas en bienes raíces. Encuentra tu apartamento o propiedad ideal con los mejores profesionales del mercado.">
+    <title>Premier Realtors - Especialistas en Bienes Raíces</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" class="flex items-center space-x-3 group">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform shadow-md">
+                                <i class="fas fa-building text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h1 class="text-2xl font-bold text-gray-900 leading-tight nav-brand">
+                                    Premier <span class="text-blue-900">Realtors</span>
+                                </h1>
+                                <p class="text-xs text-gray-500 -mt-1 nav-tagline">Especialistas en Bienes Raíces</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="#inicio" class="nav-link text-gray-700 hover:text-blue-900 px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-blue-50">Inicio</a>
+                    <a href="properties.html" class="nav-link text-gray-700 hover:text-blue-900 px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-blue-50">Propiedades</a>
+                    <a href="#servicios" class="nav-link text-gray-700 hover:text-blue-900 px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-blue-50">Servicios</a>
+                    <a href="#nosotros" class="nav-link text-gray-700 hover:text-blue-900 px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-blue-50">Nosotros</a>
+                    <a href="#contacto" class="nav-link text-gray-700 hover:text-blue-900 px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-blue-50">Contacto</a>
+                    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20propiedades" 
+                       target="_blank" 
+                       class="ml-4 bg-[#25D366] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#20BA5A] transition-all transform hover:scale-105 shadow-lg flex items-center space-x-2">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+                <div class="lg:hidden flex items-center space-x-3">
+                    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20propiedades" 
+                       target="_blank" 
+                       class="bg-[#25D366] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#20BA5A] transition-all shadow-lg">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#inicio" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-md font-medium transition-colors">Inicio</a>
+                <a href="properties.html" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-md font-medium transition-colors">Propiedades</a>
+                <a href="#servicios" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-md font-medium transition-colors">Servicios</a>
+                <a href="#nosotros" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-md font-medium transition-colors">Nosotros</a>
+                <a href="#contacto" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-md font-medium transition-colors">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1973&q=80" 
+                 alt="Luxury Real Estate" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-700/60"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
+                Encuentra Tu Hogar Ideal
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 mb-8 animate-fade-in-delay">
+                Premier Realtors - Especialistas en bienes raíces de lujo
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
+                <a href="#propiedades" class="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all transform hover:scale-105 shadow-lg">
+                    <i class="fas fa-search mr-2"></i>Explorar Propiedades
+                </a>
+                <a href="#contacto" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all transform hover:scale-105">
+                    <i class="fas fa-phone mr-2"></i>Contactar
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-blue-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stat-item">
+                    <div class="text-4xl md:text-5xl font-bold mb-2 text-white" data-target="500">0</div>
+                    <div class="text-white">Propiedades Vendidas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="text-4xl md:text-5xl font-bold mb-2 text-white" data-target="1200">0</div>
+                    <div class="text-white">Clientes Satisfechos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="text-4xl md:text-5xl font-bold mb-2 text-white" data-target="15">0</div>
+                    <div class="text-white">Años de Experiencia</div>
+                </div>
+                <div class="stat-item">
+                    <div class="text-4xl md:text-5xl font-bold mb-2 text-white" data-target="98">0</div>
+                    <div class="text-white">% Satisfacción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties Section -->
+    <section id="propiedades" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Propiedades Destacadas</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Descubre nuestra selección exclusiva de apartamentos y propiedades de lujo
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property Card 1 -->
+                <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80" 
+                             alt="Apartamento Moderno" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-blue-900 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            En Venta
+                        </div>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-gray-900">
+                            <i class="fas fa-bed mr-1"></i>3
+                            <i class="fas fa-bath ml-3 mr-1"></i>2
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Apartamento Moderno Centro</h3>
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-900"></i>
+                            Zona Centro, Ciudad
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-3xl font-bold text-blue-900">$350,000</span>
+                            <span class="text-gray-500">150 m²</span>
+                        </div>
+                        <a href="details.html?id=1" class="block w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-center">
+                            Ver Detalles
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2053&q=80" 
+                             alt="Casa de Lujo" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Disponible
+                        </div>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-gray-900">
+                            <i class="fas fa-bed mr-1"></i>4
+                            <i class="fas fa-bath ml-3 mr-1"></i>3
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Villa de Lujo con Piscina</h3>
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-900"></i>
+                            Zona Residencial Premium
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-3xl font-bold text-blue-900">$850,000</span>
+                            <span class="text-gray-500">280 m²</span>
+                        </div>
+                        <a href="details.html?id=2" class="block w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-center">
+                            Ver Detalles
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Penthouse" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-blue-900 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            En Venta
+                        </div>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-gray-900">
+                            <i class="fas fa-bed mr-1"></i>5
+                            <i class="fas fa-bath ml-3 mr-1"></i>4
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Penthouse con Vista al Mar</h3>
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-900"></i>
+                            Torre Residencial, Costa
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-3xl font-bold text-blue-900">$1,200,000</span>
+                            <span class="text-gray-500">320 m²</span>
+                        </div>
+                        <a href="details.html?id=3" class="block w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-center">
+                            Ver Detalles
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property Card 4 -->
+                <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Apartamento Minimalista" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Disponible
+                        </div>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-gray-900">
+                            <i class="fas fa-bed mr-1"></i>2
+                            <i class="fas fa-bath ml-3 mr-1"></i>1
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Apartamento Minimalista</h3>
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-900"></i>
+                            Zona Moderna, Ciudad
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-3xl font-bold text-blue-900">$220,000</span>
+                            <span class="text-gray-500">85 m²</span>
+                        </div>
+                        <a href="details.html?id=4" class="block w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-center">
+                            Ver Detalles
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property Card 5 -->
+                <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Casa Familiar" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-blue-900 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            En Venta
+                        </div>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-gray-900">
+                            <i class="fas fa-bed mr-1"></i>3
+                            <i class="fas fa-bath ml-3 mr-1"></i>2
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Casa Familiar Espaciosa</h3>
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-900"></i>
+                            Barrio Residencial Tranquilo
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-3xl font-bold text-blue-900">$450,000</span>
+                            <span class="text-gray-500">200 m²</span>
+                        </div>
+                        <a href="details.html?id=5" class="block w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-center">
+                            Ver Detalles
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Property Card 6 -->
+                <div class="property-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2076&q=80" 
+                             alt="Loft Industrial" 
+                             class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                            Disponible
+                        </div>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-semibold text-gray-900">
+                            <i class="fas fa-bed mr-1"></i>1
+                            <i class="fas fa-bath ml-3 mr-1"></i>1
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Loft Industrial Moderno</h3>
+                        <p class="text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-900"></i>
+                            Distrito Creativo, Centro
+                        </p>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-3xl font-bold text-blue-900">$280,000</span>
+                            <span class="text-gray-500">110 m²</span>
+                        </div>
+                        <a href="details.html?id=6" class="block w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-center">
+                            Ver Detalles
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="properties.html" class="inline-block bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-all transform hover:scale-105 shadow-lg">
+                    Ver Todas las Propiedades
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Nuestros Servicios</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Soluciones completas en bienes raíces para todas tus necesidades
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card p-8 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Compra de Propiedades</h3>
+                    <p class="text-gray-600">
+                        Te ayudamos a encontrar la propiedad perfecta que se ajuste a tus necesidades y presupuesto.
+                    </p>
+                </div>
+
+                <div class="service-card p-8 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Venta de Propiedades</h3>
+                    <p class="text-gray-600">
+                        Maximizamos el valor de tu propiedad con estrategias de marketing y negociación profesional.
+                    </p>
+                </div>
+
+                <div class="service-card p-8 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-key text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Alquiler</h3>
+                    <p class="text-gray-600">
+                        Encuentra el apartamento o casa ideal para alquilar con las mejores condiciones del mercado.
+                    </p>
+                </div>
+
+                <div class="service-card p-8 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Asesoría de Inversión</h3>
+                    <p class="text-gray-600">
+                        Análisis profesional para inversiones inmobiliarias rentables y seguras.
+                    </p>
+                </div>
+
+                <div class="service-card p-8 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-file-contract text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Gestión Legal</h3>
+                    <p class="text-gray-600">
+                        Asesoría legal completa para todas las transacciones inmobiliarias.
+                    </p>
+                </div>
+
+                <div class="service-card p-8 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-camera text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Tours Virtuales</h3>
+                    <p class="text-gray-600">
+                        Visitas virtuales 360° para que conozcas las propiedades desde cualquier lugar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Sobre Premier Realtors</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Con más de 15 años de experiencia en el mercado inmobiliario, Premier Realtors se ha consolidado como líder en la industria de bienes raíces. Nuestro equipo de profesionales altamente capacitados está comprometido con brindar el mejor servicio a nuestros clientes.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Nos especializamos en propiedades de lujo, apartamentos modernos y casas familiares, ofreciendo soluciones personalizadas que superan las expectativas. Nuestra misión es hacer realidad los sueños de nuestros clientes encontrando el hogar perfecto.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div>
+                            <div class="text-3xl font-bold text-blue-900 mb-2">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900 mb-1">Certificados</h4>
+                            <p class="text-gray-600 text-sm">Profesionales certificados</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-blue-900 mb-2">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-900 mb-1">Equipo Experto</h4>
+                            <p class="text-gray-600 text-sm">Más de 50 agentes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1973&q=80" 
+                         alt="Equipo Premier Realtors" 
+                         class="rounded-xl shadow-2xl">
+                    <div class="absolute -bottom-6 -left-6 bg-blue-900 text-white p-6 rounded-xl shadow-xl">
+                        <div class="text-4xl font-bold mb-2">15+</div>
+                        <div class="text-lg">Años de Experiencia</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Lo Que Dicen Nuestros Clientes</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Testimonios reales de clientes satisfechos
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Premier Realtors nos ayudó a encontrar nuestro hogar perfecto. El servicio fue excepcional y el proceso muy profesional. ¡Altamente recomendados!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            MC
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">María González</div>
+                            <div class="text-sm text-gray-600">Compradora</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Vendimos nuestra propiedad en tiempo récord y al mejor precio. El equipo de Premier Realtors es simplemente el mejor en el mercado."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            JC
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Juan Carlos Pérez</div>
+                            <div class="text-sm text-gray-600">Vendedor</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "Excelente atención y asesoría profesional. Encontraron exactamente lo que buscábamos y el proceso fue muy fluido. ¡Gracias Premier Realtors!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            LR
+                        </div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Laura Rodríguez</div>
+                            <div class="text-sm text-gray-600">Inversora</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-gradient-to-br from-blue-900 to-blue-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Contáctanos</h2>
+                <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+                    Estamos aquí para ayudarte a encontrar tu propiedad ideal
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Dirección</h3>
+                                <p class="text-blue-100">Av. Principal 123, Zona Centro<br>Ciudad, País</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Teléfono</h3>
+                                <p class="text-blue-100">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Email</h3>
+                                <p class="text-blue-100">info@premierrealtors.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Horario</h3>
+                                <p class="text-blue-100">Lun - Vie: 9:00 AM - 6:00 PM<br>Sáb: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium mb-2">Teléfono</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                      class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white/50"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-blue-900 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors transform hover:scale-105">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">
+                        <i class="fas fa-building mr-2"></i>
+                        Premier Realtors
+                    </h3>
+                    <p class="text-sm">
+                        Especialistas en bienes raíces de lujo. Tu hogar perfecto te está esperando.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#propiedades" class="hover:text-white transition-colors">Propiedades</a></li>
+                        <li><a href="#servicios" class="hover:text-white transition-colors">Servicios</a></li>
+                        <li><a href="#nosotros" class="hover:text-white transition-colors">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Compra</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Venta</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Alquiler</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Asesoría</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2024 Premier Realtors. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 bg-blue-900 text-white w-12 h-12 rounded-full shadow-lg hover:bg-blue-800 transition-all transform hover:scale-110 opacity-0 invisible z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="config.js"></script>
+    <script src="properties-data.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Actualizar enlaces de WhatsApp con configuración
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+            whatsappLinks.forEach(link => {
+                if (!link.id || link.id !== 'whatsapp-link') {
+                    link.href = getWhatsAppLink();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

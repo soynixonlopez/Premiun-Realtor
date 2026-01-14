@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Todas las propiedades disponibles - Premier Realtors">
+    <title>Todas las Propiedades - Premier Realtors</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/98 backdrop-blur-md shadow-lg transition-all duration-300 border-b border-gray-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" class="flex items-center space-x-3 group">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform shadow-md">
+                                <i class="fas fa-building text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h1 class="text-2xl font-bold text-gray-900 leading-tight">
+                                    Premier <span class="text-blue-900">Realtors</span>
+                                </h1>
+                                <p class="text-xs text-gray-500 -mt-1">Especialistas en Bienes Raíces</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="index.html#inicio" class="nav-link text-gray-700 hover:text-blue-900 px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-blue-50">Inicio</a>
+                    <a href="properties.html" class="nav-link text-blue-900 font-semibold px-4 py-2 text-sm font-medium transition-colors rounded-lg bg-blue-50">Propiedades</a>
+                    <a href="index.html#servicios" class="nav-link text-gray-700 hover:text-blue-900 px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-blue-50">Servicios</a>
+                    <a href="index.html#nosotros" class="nav-link text-gray-700 hover:text-blue-900 px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-blue-50">Nosotros</a>
+                    <a href="index.html#contacto" class="nav-link text-gray-700 hover:text-blue-900 px-4 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-blue-50">Contacto</a>
+                    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20propiedades" 
+                       target="_blank" 
+                       class="ml-4 bg-[#25D366] text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-[#20BA5A] transition-all transform hover:scale-105 shadow-lg flex items-center space-x-2">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+                <div class="lg:hidden flex items-center space-x-3">
+                    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20propiedades" 
+                       target="_blank" 
+                       class="bg-[#25D366] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#20BA5A] transition-all shadow-lg">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                    </a>
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html#inicio" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-md font-medium transition-colors">Inicio</a>
+                <a href="properties.html" class="block px-4 py-3 text-blue-900 bg-blue-50 rounded-md font-medium transition-colors">Propiedades</a>
+                <a href="index.html#servicios" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-md font-medium transition-colors">Servicios</a>
+                <a href="index.html#nosotros" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-md font-medium transition-colors">Nosotros</a>
+                <a href="index.html#contacto" class="block px-4 py-3 text-gray-700 hover:bg-blue-50 rounded-md font-medium transition-colors">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Properties Section -->
+    <section class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="mb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Todas las Propiedades</h1>
+                <p class="text-xl text-gray-600">Encuentra tu propiedad ideal con nuestros filtros avanzados</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar Filters -->
+                <aside class="lg:w-80 flex-shrink-0">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-32">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-xl font-bold text-gray-900">Filtros</h2>
+                            <button id="clear-filters" class="text-sm text-blue-900 hover:underline">Limpiar</button>
+                        </div>
+
+                        <form id="filter-form" class="space-y-6">
+                            <!-- Tipo de Propiedad -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-900 mb-3">Tipo de Propiedad</label>
+                                <select id="filter-type" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                                    <option value="all">Todos los tipos</option>
+                                    <option value="Apartamento">Apartamento</option>
+                                    <option value="Casa">Casa</option>
+                                    <option value="Penthouse">Penthouse</option>
+                                    <option value="Loft">Loft</option>
+                                    <option value="Estudio">Estudio</option>
+                                </select>
+                            </div>
+
+                            <!-- Estado -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-900 mb-3">Estado</label>
+                                <select id="filter-status" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                                    <option value="all">Todos</option>
+                                    <option value="En Venta">En Venta</option>
+                                    <option value="Disponible">Disponible</option>
+                                </select>
+                            </div>
+
+                            <!-- Rango de Precio -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-900 mb-3">Rango de Precio</label>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-xs text-gray-600 mb-1">Precio Mínimo</label>
+                                        <input type="number" id="filter-min-price" placeholder="0" min="0" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs text-gray-600 mb-1">Precio Máximo</label>
+                                        <input type="number" id="filter-max-price" placeholder="Sin límite" min="0" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Habitaciones -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-900 mb-3">Habitaciones</label>
+                                <select id="filter-bedrooms" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                                    <option value="all">Cualquier cantidad</option>
+                                    <option value="1">1+</option>
+                                    <option value="2">2+</option>
+                                    <option value="3">3+</option>
+                                    <option value="4">4+</option>
+                                    <option value="5">5+</option>
+                                </select>
+                            </div>
+
+                            <!-- Baños -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-900 mb-3">Baños</label>
+                                <select id="filter-bathrooms" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                                    <option value="all">Cualquier cantidad</option>
+                                    <option value="1">1+</option>
+                                    <option value="2">2+</option>
+                                    <option value="3">3+</option>
+                                    <option value="4">4+</option>
+                                </select>
+                            </div>
+
+                            <!-- Botón Aplicar Filtros -->
+                            <button type="submit" class="w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
+                                <i class="fas fa-filter mr-2"></i>Aplicar Filtros
+                            </button>
+                        </form>
+
+                        <!-- Mobile Filter Toggle -->
+                        <button id="mobile-filter-toggle" class="lg:hidden w-full mt-4 bg-gray-100 text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                            <i class="fas fa-times mr-2"></i>Cerrar Filtros
+                        </button>
+                    </div>
+                </aside>
+
+                <!-- Properties Grid -->
+                <div class="flex-1">
+                    <!-- Results Header -->
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
+                        <div>
+                            <p class="text-gray-600">
+                                Mostrando <span id="results-count" class="font-semibold text-gray-900">0</span> propiedades
+                            </p>
+                        </div>
+                        <div class="mt-4 sm:mt-0">
+                            <label class="text-sm text-gray-600 mr-2">Ordenar por:</label>
+                            <select id="sort-properties" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                                <option value="price-asc">Precio: Menor a Mayor</option>
+                                <option value="price-desc">Precio: Mayor a Menor</option>
+                                <option value="area-asc">Área: Menor a Mayor</option>
+                                <option value="area-desc">Área: Mayor a Menor</option>
+                                <option value="newest">Más Recientes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Properties Grid -->
+                    <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                        <!-- Properties will be loaded here -->
+                    </div>
+
+                    <!-- No Results Message -->
+                    <div id="no-results" class="hidden text-center py-20">
+                        <i class="fas fa-search text-6xl text-gray-300 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">No se encontraron propiedades</h3>
+                        <p class="text-gray-600 mb-6">Intenta ajustar los filtros para ver más resultados</p>
+                        <button id="clear-filters-btn" class="bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
+                            Limpiar Filtros
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Filter Button (Fixed) -->
+    <button id="mobile-filter-btn" class="lg:hidden fixed bottom-6 right-6 bg-blue-900 text-white w-14 h-14 rounded-full shadow-lg hover:bg-blue-800 transition-all transform hover:scale-110 z-40 flex items-center justify-center">
+        <i class="fas fa-filter text-xl"></i>
+    </button>
+
+    <!-- Mobile Filter Overlay -->
+    <div id="mobile-filter-overlay" class="lg:hidden fixed inset-0 bg-black/50 z-50 hidden">
+        <div class="absolute inset-y-0 left-0 w-80 bg-white shadow-2xl overflow-y-auto">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-xl font-bold text-gray-900">Filtros</h2>
+                    <button id="close-mobile-filters" class="text-gray-500 hover:text-gray-900">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <!-- Same filter form as sidebar -->
+                <form id="mobile-filter-form" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-900 mb-3">Tipo de Propiedad</label>
+                        <select id="mobile-filter-type" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            <option value="all">Todos los tipos</option>
+                            <option value="Apartamento">Apartamento</option>
+                            <option value="Casa">Casa</option>
+                            <option value="Penthouse">Penthouse</option>
+                            <option value="Loft">Loft</option>
+                            <option value="Estudio">Estudio</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-900 mb-3">Estado</label>
+                        <select id="mobile-filter-status" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            <option value="all">Todos</option>
+                            <option value="En Venta">En Venta</option>
+                            <option value="Disponible">Disponible</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-900 mb-3">Rango de Precio</label>
+                        <div class="space-y-3">
+                            <div>
+                                <label class="block text-xs text-gray-600 mb-1">Precio Mínimo</label>
+                                <input type="number" id="mobile-filter-min-price" placeholder="0" min="0" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            </div>
+                            <div>
+                                <label class="block text-xs text-gray-600 mb-1">Precio Máximo</label>
+                                <input type="number" id="mobile-filter-max-price" placeholder="Sin límite" min="0" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-900 mb-3">Habitaciones</label>
+                        <select id="mobile-filter-bedrooms" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            <option value="all">Cualquier cantidad</option>
+                            <option value="1">1+</option>
+                            <option value="2">2+</option>
+                            <option value="3">3+</option>
+                            <option value="4">4+</option>
+                            <option value="5">5+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-900 mb-3">Baños</label>
+                        <select id="mobile-filter-bathrooms" class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                            <option value="all">Cualquier cantidad</option>
+                            <option value="1">1+</option>
+                            <option value="2">2+</option>
+                            <option value="3">3+</option>
+                            <option value="4">4+</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-900 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
+                        <i class="fas fa-filter mr-2"></i>Aplicar Filtros
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">
+                        <i class="fas fa-building mr-2"></i>
+                        Premier Realtors
+                    </h3>
+                    <p class="text-sm">
+                        Especialistas en bienes raíces de lujo. Tu hogar perfecto te está esperando.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="properties.html" class="hover:text-white transition-colors">Propiedades</a></li>
+                        <li><a href="index.html#servicios" class="hover:text-white transition-colors">Servicios</a></li>
+                        <li><a href="index.html#nosotros" class="hover:text-white transition-colors">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Servicios</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Compra</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Venta</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Alquiler</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Asesoría</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-900 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2024 Premier Realtors. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="config.js"></script>
+    <script src="properties-data.js"></script>
+    <script src="script.js"></script>
+    <script src="properties.js"></script>
+    <script>
+        // Actualizar enlaces de WhatsApp con configuración
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+            whatsappLinks.forEach(link => {
+                link.href = getWhatsAppLink();
+            });
+        });
+    </script>
+</body>
+</html>
